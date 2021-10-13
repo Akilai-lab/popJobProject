@@ -1,0 +1,98 @@
+<div class="imgBackground">
+	<div class="layout">
+	    <div id="top">
+            <div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+            <div class="menu" *ngIf="isClicked === true">
+                <div class="menuNav">
+                    <h2 routerLink="/profil">
+                        accéder au profil
+                    </h2>
+                    <h2 routerLink="/mission">
+                        retour
+                    </h2>
+                </div>
+            </div>
+		</div>
+        <section>
+            <div class="redBox">
+                <span (click)="add()">+</span>
+            </div>
+            <div class="greenBox" *ngFor="let item of projectsList">
+                <div style="background-color: #a92c4a;height: 305px;display: flex;align-items: center;width: -webkit-fill-available;">
+                    <div class="img" style="width: 50%;display: flex;align-items: center; height: 305px;" *ngIf ="item.img != null ">
+                        <img src="{{item.img}}" style="width: 100%; height: 100%;object-fit: cover;"/>
+                        <!--<a href="{{item.link}}" style="position: relative;right: 50%;top: 115px;color: white;background-color: silver;">Voir Plus</a>-->
+                    </div>
+                    <div class="file" style="width: 50%;height: 305px;" *ngIf="item.file != null">
+                        <a href="{{item.file}}" target="blank" style="display:block;width:100%;text-align:center;color:white;text-decoration:none;background-image: url('./../../assets/icones/download.png');background-size: contain;height: 305px;background-repeat: no-repeat;margin: 12%;">
+                            <p style="position: relative;top: 200px;text-align: -webkit-left;">Télécharger le document</p>
+                        </a>
+                    </div>
+                    <div style="color:white;width: 50%;height: auto;margin: 0 5% 0 0;">
+                        <h3>Titre</h3>
+                        <p>{{item.title}}</p>
+                        <h3>Description</h3>
+                        <p>{{item.descript}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="greenBoxId" *ngIf="activBloc == true">
+                <div style="background-color: #a92c4a;height: 305px;display: flex;align-items: center;width: -webkit-fill-available;" *ngFor="let item of redirectProjects">
+                    <div class="img" style="width: 50%;display: flex;align-items: center; height: 305px;" *ngIf ="item.img != null ">
+                        <img src="{{item.img}}" style="width: 100%; height: 100%;object-fit: cover;"/>
+                        <!--<a href="{{item.link}}" style="position: relative;right: 50%;top: 115px;color: white;background-color: silver;">Voir Plus</a>-->
+                    </div>
+                    <div class="file" style="width: 50%;height: 305px;" *ngIf="item.file != null">
+                        <a href="{{item.file}}" target="blank" style="display:block;width:100%;text-align:center;color:white;text-decoration:none;background-image: url('./../../assets/icones/download.png');background-size: contain;height: 305px;background-repeat: no-repeat;margin: 12%;">
+                            <p style="position: relative;top: 200px;text-align: -webkit-left;">Télécharger le document</p>
+                        </a>
+                    </div>
+                    <div style="color:white;width: 50%;height: auto;margin: 0 5% 0 0;">
+                        <h3>Titre</h3>
+                        <p>{{item.title}}</p>
+                        <h3>Description</h3>
+                        <p>{{item.descript}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="form" *ngIf="isActive && (userStatus === 'Candidat')">
+            <h3>Nouveau projet</h3>
+            <form role="form" enctype="multipart/form-data" (ngSubmit)="addProject(f)" #f="ngForm" name="myForm">
+            <div class="form-group">
+                <input type="text" id="nom" class="form-control" placeholder="TITRE DU PROJET" name="title" ngModel required>
+            </div>
+            <div class="possibilities">
+              <div id="imageDl" class="form-group">
+                <p>Une Image</p>
+                <div id="imageIcone" (click)="addImage()">
+                </div>
+                <input type="file" accept="image/*" id="image"(change)="onFileAdded($event)" *ngIf="active" name="image">
+              </div>
+              <div id="lien" class="form-group">
+                <p>Un Lien</p>
+                <div id="lienIcone" (click)="addLink()">
+                </div>
+                <input type="text" id="link" class="form-control" *ngIf="activeLink" ngModel name="link"> 
+              </div>
+              <div id="file" class="form-group">
+                <p>Un fichier</p>
+                <div id="fichierIcone" (click)="addFile()">
+                </div>
+                <input type="file" id="file" (change)="onFilesAdded($event)" accept=".doc,.docx,.pdf" class="form-control" *ngIf="activeFile" name="fichier"> 
+              </div>
+            </div>
+            <textarea id="story" name="story" rows="7" cols="55" name="descript" ngModel>
+      
+      
+      
+            Compétences et détails
+            </textarea>
+            <div class="buttonStyle">
+                <button class="button" type="submit">Poster</button>
+            </div>
+            <img src="./../../assets/icones/iconeRetourRecrut.png" (click)="return()"/>
+          </form>
+        </div>
+	</div>
+</div>

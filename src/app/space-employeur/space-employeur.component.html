@@ -1,0 +1,130 @@
+<div class="imgBackground">
+	<div class="layout">
+	<div id="top">
+		<div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+		<div class="menu" *ngIf="isClicked === true">
+			<div class="menuNav">
+				<h2 routerLink="/profil">
+					editez votre profil
+				</h2>
+				<h2 routerLink="/offersRecruteurs">
+					postez vos offres
+				</h2>
+			</div>
+		</div>
+		<div class="filters">
+			<!--Requêtes à envoyer à la base de données pour récupérer les données-->
+			<div class="filter" (click)="searchDomaines()">
+				<span>+</span>
+				<p>domaines</p>
+			</div>	
+			<form role="form" (click)="saveDomaines(f)" #f="ngForm" name="myForm" *ngIf="domaineSelect">
+				<div class="form-group">
+					<select name="domaine" id="domaine-select" class="form-control" ngModel>
+						<option value="" >--Choisir votre domaine d'exercice--</option>
+						<option value="fullStack" >Développeur Full Stack</option>
+						<option value="front">Développeur Front End</option>
+						<option value="back">Développeur Back End</option>
+						<option value="illustrator">Illustrateur</option>
+						<option value="graphiste">Graphiste</option>
+						<option value="peintre">Artiste Peintre</option>
+						<option value="photographe">Photographe</option>
+						<option value="designer">Designer</option>
+						<option value="creator">Créateur de jeux</option>
+						<option value="music">Musicien</option>
+					</select>
+				</div>
+				<button type="submit">Editez</button>
+			</form>	
+			<div class="filter" (click)="searchProfil()">
+				<span>+</span>
+				<p>profil candidat</p>
+			</div>
+			<ul id="users" style="list-style: none;">
+			</ul>
+			<div class="filter" (click)="searchDispo()">
+				<span>+</span>
+				<p>disponibilité</p>
+			</div>
+			<form role="form" (click)="saveDisponbilities(g)" #g="ngForm" name="myForm" *ngIf="dispoSelect">
+				<div class="form-group">
+					<label>Date de début de disponibilité</label>
+					<input type="date" id="start" name="trip-start" min="2021-01-01" max="2025-12-31" ngModel>
+				</div>
+				<div class="form-group">
+					<label>Date de fin de disponibilité</label>
+					<input type="date" id="end" name="trip-end" min="2021-01-01" max="2025-12-31" ngModel>
+				</div>
+				<button type="submit">Editez</button>
+			</form>	
+		</div>
+	</div>
+	<div id="announcy">
+		<div class="offers">
+			<!--Requêtes à envoyer à la base de données pour récupérer les données-->
+			<div class="redbox">
+					<p>
+						Candidat 1
+						<br>Nom candidat
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+			<div class="greenbox">
+					<p>
+						Candidat 2
+						<br>Nom candidat
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+			<div class="redboxLast">
+					<p>
+						Candidat 3
+						<br>Nom candidat
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+		</div>
+		<div class="spaceAndPayements">
+			<div class="payements">
+				<div class="free">
+					<div class="roundfree">
+						<h4>Essai</h4>
+					</div>
+					<ul>
+						<li>Essai gratuit</li>
+						<li>mise en évidence d’offres</li>
+						<li>Mise en relation</li>
+					</ul>
+				</div>
+				<div class="month">
+					<div class="roundprice">
+						<h4>10 E</h4>
+					</div>
+					<ul>
+						<li>Mise à jour régulière</li>
+						<li>Simplification de contacts</li>
+						<li>Conseils & aide</li>
+					</ul>
+				</div>
+			</div>
+			<div class="spaceProfil">
+				<ul>
+					<li class="spacecandidat" routerLink="/accueil">Candidats</li>
+					<li class="spacerecruteurs" routerLink="/spaceRecruteurs">Recruteurs</li>
+					<li class="IconeCandidat" routerLink="/accueil"></li>
+					<li class="IconeRecruteur" routerLink="/spaceRecruteurs"></li>
+				</ul>
+				<div class="joinUs">
+					<button type="button" (click)="accesPage()">Nous rejoindre</button>
+					<h3>Espace Recruteurs</h3>
+					<p>
+						Accèdez aux profils de candidats et à leurs parcours. En bonus, un engagment avec un des candidats vous failitera votre recrutement d’offres à venir.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

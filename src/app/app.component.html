@@ -1,0 +1,78 @@
+
+  <header>
+    <div class="title">
+        <ul>
+          <li routerLink='/spaceCandidat' *ngIf="statusCandidat && !isntLog">
+            Espace Candidats
+          </li>
+          <li routerLink='/spaceRecruteurs' *ngIf="!statusCandidat && !isntLog">
+            Espace Recruteurs
+          </li>
+          <li routerLink='/profil' *ngIf ="!isntLog">
+            Profil  
+          </li>
+          <li routerLink='/projectsCandidat' *ngIf ="!isntLog">
+            Projets Candidats
+          </li>
+          <li routerLink="/offersRecruteurs" *ngIf ="!isntLog">
+            Offres Recruteurs
+          </li>
+          <li routerLink="/suscribeAbonnemrent">
+            Abonnement et Inscription
+          </li>
+          <li routerLink="/connection" *ngIf ="isntLog">
+            S'inscrire
+          </li>
+          <li routerLink="/connection" *ngIf ="isntLog">
+            Se connecter
+          </li>
+          <li (click)="deconnect()" routerLink="/connection" *ngIf ="!isntLog">Se déconnecter</li>
+        </ul>
+      </div>
+    </header>
+    <!--<div class="cookies" *ngIf="acceptOrNot == true">
+      <p *ngIf="showDetailsCookies == true">
+        Avec votre accord, nos partenaires et nous utilisons des cookies ou technologies similaires pour stocker et accéder à vos informations personnelles, comme votre visite sur ce site. Vous pouvez retirer votre consentement ou vous opposer aux traitements fondés sur l'intérêt légitime à tout moment en cliquant sur "Gérer mes choix" ou dans notre politique de confidentialité présente sur ce site, et dans ce cas vous n'aurez plus accès à du contenu personnalisé basé sur votre navigation, aux contenus et fonctionnalités provenant des réseaux sociaux ou des plateformes de vidéos et nous ne tiendrons pas compte de votre usage pour améliorer notre site.
+      </p>
+      <p *ngIf="showDetailsCookies == true">
+        Avec nos partenaires, nous traitons vos données pour les finalités suivantes : le fonctionnement du site, la mesure d'audience et web analyse, la personnalisation, la publicité et le ciblage, les publicités et contenus personnalisés, la mesure de performance des publicités et du contenu, le développement de produit, l'activation des fonctionnalités des réseaux sociaux.
+      </p>
+      <p *ngIf="showDetailsCookies == true">
+        Vos préférences seront conservées pendant une durée de 6 mois.
+      </p>
+      <ul *ngIf="showDetailsCookies == true">
+        <li (click)="accept()">Accepter les cookies</li>
+        <li (click)="refuse()">Refuser les cookies</li>
+        <li (click)="viewMoreOption()">Gérer mes choix</li>
+      </ul>
+      <div *ngIf="showDetailsCookies == false">
+        <p style="text-align: left;"><strong>Bienvenue chez PopJob !</strong></p>
+        <p>
+          Nous déposons des cookies et utilisons des informations non sensibles de votre appareil pour améliorer nos produits et afficher des publicités et contenus personnalisés. Vous pouvez accepter ou refuser ces différentes opérations, en totalité ou finalité par finalité. Les traceurs techniques indispensables au bon fonctionnement de nos services ne peuvent être désactivés. Pour en savoir plus sur les cookies, les données que nous utilisons, les traitements que nous réalisons vous pouvez consulter notre <a routerLink="/privacy">politique de confidentialité</a> et notre <a>politique de cookies</a>.
+        </p>
+        <h2 style="font-size: 0.95em;text-transform: uppercase;color: brown; margin: auto 8%;">Vous autorisez</h2>
+        <p style="font-weight: 600;text-align: left;" (click)="moreInfoAuthorized()"><span style="margin-right:7px">+</span>Les cookies de fonctionnement</p>
+        <p style="text-align: left;" *ngIf="showAuthorized == true">
+          Ces cookies sont nécessaires pour le bon fonctionnement des sites et applications de PopJob. Ces cookies et traceurs incluent par exemple : les cookies AT Internet, qui bénéficient d’une exemption de consentement et permettent de mesurer la fréquentation sur ce site ou cette application, les cookies de sécurité informatique, les cookies d'authentification et le cookie qui permet la mémorisation de vos préférences en termes de cookies.
+        </p>
+        <p><strong>
+          Cette finalité est requise par notre site pour fonctionner normalement et ne peut pas être désactivée.
+        </strong></p>
+        <h2 style="font-size: 0.95em;text-transform: uppercase;color: brown;margin: auto 8%;">Requis</h2>
+        <p style="font-weight: 600;text-align: left;" (click)="moreInfoRequire()"><span style="margin-right:7px">+</span>Mesure d'audience et web analyse</p>
+        <p style="text-align: left;" *ngIf="showRequire == true">
+          Ces cookies permettent d’obtenir des statistiques d’audience sur nos offres afin d’optimiser son ergonomie, sa navigation et ses contenus. En désactivant ces cookies, ces données seront incomplètes et nos améliorations et services avancés ne pourront pas tenir compte de vos propres usages.
+        </p>
+        <div>
+          <p style="font-size: 0.95em;text-transform: uppercase;color: brown;margin: auto 8%;text-align: center;">Consentement</p>
+          <ul style="display: flex;">
+            <li (click)="refuse()">Refuser</li>
+            <li (click)="accept()">Accepter</li>
+          </ul>
+        </div>
+      </div>
+    </div>-->
+<router-outlet>
+</router-outlet>
+<footer>
+</footer>

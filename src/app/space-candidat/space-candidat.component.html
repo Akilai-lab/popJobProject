@@ -1,0 +1,143 @@
+<div class="imgBackground">
+	<div class="layout">
+	<div id="top">
+		<div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+		<div class="menu" *ngIf="isClicked === true">
+			<div class="menuNav">
+				<h2 routerLink="/profil">
+					editez votre profil
+				</h2>
+				<h2 routerLink="/projectsCandidat">
+					rajoutez vos projets
+				</h2>
+			</div>
+		</div>
+		<div class="filters">
+			<!--Requêtes à envoyer à la base de données pour récupérer les données-->
+			<div class="filter" (click)="searchDomaines()">
+				<span>+</span>
+				<p>domaines</p>
+			</div>	
+			<form role="form" (click)="saveDomaines(f)" #f="ngForm" name="myForm" *ngIf="domaineSelect">
+				<div class="form-group">
+					<select name="domaine" id="domaine-select" class="form-control" ngModel>
+						<option value="" >--Choisir votre domaine d'exercice--</option>
+						<option value="fullStack" >Développeur Full Stack</option>
+						<option value="front">Développeur Front End</option>
+						<option value="back">Développeur Back End</option>
+						<option value="illustrator">Illustrateur</option>
+						<option value="graphiste">Graphiste</option>
+						<option value="peintre">Artiste Peintre</option>
+						<option value="photographe">Photographe</option>
+						<option value="designer">Designer</option>
+						<option value="creator">Créateur de jeux</option>
+						<option value="music">Musicien</option>
+					</select>
+				</div>
+				<button type="submit">Editez</button>
+			</form>		
+			<div class="filter" (click)="typeOffer()">
+				<span>+</span>
+				<p>type d'emploi</p>
+			</div>
+			<div id="types" *ngIf="chooseType">
+				<form role="form" (click)="findType(h)" #h="ngForm" name="myForm" class="form-group">
+					<div class="form-control">
+						<label>CDI</label>
+						<input type="checkbox" name="cdi" ngModel>
+					</div>
+					<div class="form-control">
+						<label>CDD</label>
+						<input type="checkbox" name="cdd" ngModel>
+					</div>
+					<div class="form-control">
+						<label>Intérim</label>
+						<input type="checkbox" name="interim" ngModel>
+					</div>
+					<div class="form-control">
+						<label>Alternance</label>
+						<input type="checkbox" name="alternance" ngModel>
+					</div>
+					<button type="submit">Editez</button>
+				</form>
+			</div>
+			<div class="filter" (click)="lastOffers()">
+				<span>+</span>
+				<p>nouvelles offres</p>
+			</div>
+		</div>
+	</div>
+	<div id="announcy">
+		<div class="offers">
+			<!--Requêtes à envoyer à la base de données pour récupérer les données-->
+			<!-- 
+				offerOne:any;
+				offerTwo:any;
+				offerThree:any;
+			-->
+			<div class="redbox">
+					<p>
+						Offre 1
+						<br>{{offerOne}}
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+			<div class="greenbox">
+					<p>
+						Offre 2
+						<br>{{offerTwo}}
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+			<div class="redboxLast">
+					<p>
+						Offre 3
+						<br>{{offerThree}}
+						<br>
+						<a>Voir plus</a>
+					</p>
+			</div>
+		</div>
+		<div class="spaceAndPayements">
+			<div class="payements">
+				<div class="free">
+					<div class="roundfree">
+						<h4>Essai</h4>
+					</div>
+					<ul>
+						<li>Essai gratuit</li>
+						<li>Hebergement gratuit</li>
+						<li>Mise en relation</li>
+					</ul>
+				</div>
+				<div class="month">
+					<div class="roundprice">
+						<h4>10 E</h4>
+					</div>
+					<ul>
+						<li>Mise à jour régulière</li>
+						<li>Simplification de contacts</li>
+						<li>Conseils & aide</li>
+					</ul>
+				</div>
+			</div>
+			<div class="spaceProfil">
+				<ul>
+					<li class="spacecandidat" routerLink="/accueil">Candidats</li>
+					<li class="spacerecruteurs" routerLink="/spaceRecruteurs">Recruteurs</li>
+					<li class="IconeCandidat" routerLink="/accueil"></li>
+					<li class="IconeRecruteur" routerLink="/spaceRecruteurs"></li>
+				</ul>
+				<div class="joinUs">
+					<button type="button" (click)="accesPage()">Nous rejoindre</button>
+					<h3>Espace Candidats</h3>
+					<p>
+						Mettez en avant vos compétences pour faciliter votre recrutement via un espace dédié à vos projets et votre parcours professionnel
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

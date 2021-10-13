@@ -1,0 +1,66 @@
+<div class="imgBackground">
+	<div class="layout">
+	    <div id="top">
+            <div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+            <div class="menu" *ngIf="isClicked === true">
+                <div class="menuNav">
+                    <h2 routerLink="/profil">
+                        accéder au profil
+                    </h2>
+                    <h2 routerLink="/accueil">
+                        retour
+                    </h2>
+                </div>
+            </div>
+		</div>
+        <section>
+            <div class="redBox">
+                <span (click)="add()">+</span>
+            </div>
+            <!--offersList-->
+            <div class="greenBox" *ngFor="let item of offersList" style="color: white;">
+                <h3>Titre de l'Annonce</h3>
+                <p>{{item.title}}</p>
+                <h3> Type de contrat</h3>
+                <p>{{item.typeContrat}}</p>
+                <h3>Descriptif de l'offre</h3>
+                <p>{{item.descript}}</p>
+            </div>
+        </section>
+        <div id="form" *ngIf="isActive && (userStatus === 'Recruteur')">
+            <h3>Nouvelle offre</h3>
+            <form role="form" (ngSubmit)="onSignin(g)" #g="ngForm">
+            <div class="form-group">
+                <input type="text" id="nom" name="title" class="form-control" placeholder="TITRE DE L'ANNONCE" ngModel required>
+            </div>
+            <div style="display:flex;height:auto;justify-content: space-around;">
+                <div>
+                    <input type="radio" id="cdd"class="form-control" name="typeEmploi" value="cdd">
+                    <label for="cdd">CDD</label>
+                </div>
+                <div>
+                    <input type="radio" id="cdi" class="form-control" name="typeEmploi" value="cdi">
+                    <label for="cdi">CDI</label>
+                </div>
+                <div>
+                    <input type="radio" id="interim" class="form-control" name="typeEmploi" value="interim">
+                    <label for="interim">Interim</label>
+                </div>
+                <div>
+                    <input type="radio" id="alternance" class="form-control" name="typeEmploi" value="alternance">
+                    <label for="alternance">Alternance</label>
+                </div>
+            </div>
+            <textarea id="story" name="story" rows="7" cols="55" ngModel>
+      
+      
+      
+            Compétences et détails
+            </textarea>
+            <div class="buttonStyle">
+                <button class="button" type="submit">Poster</button>
+            </div>
+          </form>
+        </div>
+	</div>
+</div>

@@ -1,0 +1,143 @@
+<div class="imgBackground">
+	<div class="layout">
+		<div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+		<div class="menu" *ngIf="isClicked === true">
+			<div class="menuNav">
+				<h2  (click)="editProfil()">Editer et confirmer</h2>
+				<h2>Retour</h2>
+			</div>
+			<button type="button" (click)="editProfil()" *ngIf="beEdited == false">Editer votre profil</button>
+		</div>
+		<div class="bdForm" *ngFor="let item of infoUser">
+			<form role="form" (click)="submitForm(f)" #f="ngForm" enctype="multipart/form-data" name="myForm" *ngIf="beEdited == true">
+				<div class="form-group">
+					<label>Modifier / Ajouter votre photo</label>
+					<input type="file" accept="image/*" id="image"(change)="onFilesAdded($event)" name="image" ngModel>
+				</div>
+				<div class="form-group">
+					<input type="text" id="nom" name="nom" class="form-control" placeholder="{{name}}" ngModel>
+					<!--Condidition qui dit que si item.name retourne qqchose on l'affiche sinon on affiche nom-->
+				</div>
+				<div class="form-group">
+					<input type="text" id="prenom" name="prenom" class="form-control" placeholder="{{prenom}}" ngModel><!--Condidition qui dit que si item.lastName retourne qqchose on l'affiche sinon on affiche prenom-->
+				</div>
+				<div class="form-group">
+					<input type="text" id="profession" name="profession" class="form-control" placeholder="{{profession}}" ngModel><!--Condidition qui dit que si item.profession retourne qqchose on l'affiche sinon on affiche profession-->
+				</div>
+				<div class="form-group">
+					<input type="mail" id="mail" name="mail" class="form-control" placeholder="{{mail}}" ngModel><!--Condidition qui dit que si item.mail retourne qqchose on l'affiche sinon on affiche mail-->
+				</div>
+				<div class="form-group">
+					<input type="text" id="localisation" name="localisation" class="form-control" placeholder="{{localisation}}" ngModel><!--Condidition qui dit que si item.localisation retourne qqchose on l'affiche sinon on affiche localisation-->
+				</div>
+				<div class="form-group">
+					<input type="text" id="parcours" name="parcours" class="form-control" placeholder="{{parcours}}" ngModel><!--Condidition qui dit que si item.parcours retourne qqchose on l'affiche sinon on affiche parcours-->
+				</div>
+				<div class="form-group">
+			<!---Faire une liste déroulante--->
+					<select name="domaine" id="domaine-select" class="form-control" ngModel>
+						<option value="" >--Choisir votre domaine d'exercice--</option>
+						<option value="fullStack" >Développeur Full Stack</option>
+						<option value="front">Développeur Front End</option>
+						<option value="back">Développeur Back End</option>
+						<option value="illustrator">Illustrateur</option>
+						<option value="graphiste">Graphiste</option>
+						<option value="peintre">Artiste Peintre</option>
+						<option value="photographe">Photographe</option>
+						<option value="designer">Designer</option>
+						<option value="creator">Créateur de jeux</option>
+						<option value="music">Musicien</option>
+					</select>	
+				</div>
+				<div class="form-group">
+					<label>Date de début de disponibilité</label>
+					<input type="date" id="start" name="trip-start" min="2021-01-01" max="2025-12-31" ngModel>
+				</div>
+				<div class="form-group">
+					<label>Date de fin de disponibilité</label>
+					<input type="date" id="end" name="trip-end" min="2021-01-01" max="2025-12-31" ngModel>
+				</div>
+				<div class="form-group">
+					<input type="text" id="linkOne" name="linkOne" class="form-control" placeholder="{{plateforme}}" ngModel><!--Condidition qui dit que si item.plateform retourne qqchose on l'affiche sinon on affiche Lien de plateforme-->
+				</div>
+				<div class="form-group">
+					<input type="text" id="linkTwo" name="linkTwo" class="form-control" placeholder="{{plateforme}}" ngModel><!--Condidition qui dit que si item.plateform retourne qqchose on l'affiche sinon on affiche Lien de plateforme-->
+				</div>
+				<div class="form-group">
+					<input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="Votre numéro de téléphone" ngModel><!--Condidition qui dit que si item.plateform retourne qqchose on l'affiche sinon on affiche Votre numéro de téléphone-->
+				</div>
+				<button type="submit">Editez</button>
+			</form>
+		</div>
+		<div id="attente" (click)="editProfil()" *ngIf="beEdited == false">
+		</div>
+		<div class="pictureAndInfo" *ngIf="beEdited === false">
+			<div class="picture" style="background-image: url('{{image}}');">
+			</div>
+			<div class="infos" *ngFor="let item of infoUser">
+				<div class="essentialsInfo">
+					<img src="./../../assets/icones/infoUserIcone.png" alt="icone" title="icone" />
+					<p>
+						{{name}}
+					</p>
+					<p>
+						{{prenom}}
+					</p>
+					<p>
+						{{profession}}
+					</p>
+				</div>
+				<div class="contactInfo">
+					<img src="./../../assets/icones/localisationIcone.png" alt="icone" title="icone"/>
+					<p>{{mail}}</p>
+					<p>{{localisation}}</p>
+				</div>
+				<div class="relativText">
+					<a>{{parcours}}</a>
+				</div>
+			</div>
+		</div>
+		<section *ngIf="beEdited === false">
+			<div class="newProposition">
+				<h2>Nouvelle offre</h2>
+				<div class="prop">
+					<div class="candidat">
+						<p>Recruteur 'ATOS'</p>
+					</div>
+					<div class="recrut">
+						<p>offres</p>
+					</div>
+				</div>
+			</div>
+			<div class="dispoAndPlateform">
+				<div>
+					<h2>Disponibilité</h2>
+					<div class="dispo">
+						<div class="round"><span>{{ beginDay }}</span></div>
+						<div class="round"><span>{{ beginMonth }}</span></div>
+						<p>AU</p>
+						<div class="round"><span>{{ EndDay }}</span></div>
+						<div class="round"><span>{{ EndMonth }}</span></div>
+					</div>
+				</div>
+				<div>
+					<h2>Plateforme de Contact</h2>
+					<ul>
+						<li>
+							<div class="zoom"></div>
+							<a>zoom</a>
+						</li>
+						<li>
+							<div class="meet"></div>
+							<a>meet</a>
+						</li>
+						<li>
+							<div class="phone"></div>
+							<p>telephone</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

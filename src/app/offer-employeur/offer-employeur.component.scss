@@ -1,0 +1,627 @@
+@media all and (min-width:866px) {
+	.imgBackground {
+		background-image: url('./../../assets/icones/bndSite.png');
+		min-height: calc(100vh - 90px);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: inherit;
+		.layout {
+			background-color: #ffffff61;
+			min-height: calc(100vh - 90px);
+			#top {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.nav {
+					background-image: url('./../../assets/icones/nav.png');
+					background-size: contain;
+					height: 120px;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					width: 200px;	
+				}
+				.menu {
+					background-image: url('./../../assets/icones/circleProfil.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					height: 247px;
+					.menuNav {
+						position: relative;
+						left: 80%;
+						display: flex;
+						height: 247px;
+						flex-direction: column;
+						justify-content: space-between;
+						h2:first-child {
+							text-transform: uppercase;
+							color: #900505;
+							font-size: 1.7rem;
+							margin-top: 20%;
+							position: revert;
+						}
+						h2 {
+							text-transform: uppercase;
+							color: #900505;
+							font-size: 1.7rem;
+							margin-bottom: 7%;
+							position: relative;
+							right: 52px;
+						}
+					}
+				}
+		    }
+            section {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				width: 90%;
+				margin: 7% auto;
+                .redBox {
+                    background-color: #a92c4a;
+                    width: 35%;
+                    height: 200px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 5%;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+                .greenBox {
+                    background-color: #679089;
+                    width: 35%;
+                    height: 250px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 4% 5%;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+            }
+			#form {
+				position: absolute;
+				bottom: -6%;
+				left: 30%;
+				background-color: #4a6e6b;
+				opacity: 90%;
+				padding: 0 5%;
+				h3 {
+					color: white;
+					text-transform: uppercase;
+					font-size: 22px;
+					margin: 6% auto;
+					text-align: center;
+				}
+				form {
+					input#nom {
+						p {
+							text-align:center;
+							font-weight: 600;
+						}
+					}
+					.possibilities {
+						display:flex;
+						height:auto;
+						justify-content: center;
+						#imageDl {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#imageIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#lien {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#lienIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#file {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#fichierIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+					}
+					textarea {
+						text-align: center;
+						text-transform: uppercase;
+						font-weight: 600;
+					}
+					.buttonStyle {
+						border-top: 50px solid white;
+						border-left: 25px solid transparent;
+						border-right: 25px solid transparent;
+						height: 0;
+						width: 50%;
+						margin: 2% auto 5% auto;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						.button {
+							background-color: transparent;
+							border: none;
+							color: teal;
+							text-transform: uppercase;
+							position: relative;
+							bottom: 25px;
+							font-weight: 600;
+						}
+					}
+					img {
+						width: 15%;
+						margin-bottom: 5%;
+						position: relative;
+						bottom: 75px;
+						left: 375px;
+					}
+				}
+			}
+	    }
+    }
+}
+
+@media all and (min-width: 400px) and (max-width: 865px) {
+	.imgBackground {
+		background-image: url('./../../assets/icones/bndSite.png');
+		min-height: calc(100vh - 90px);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: inherit;
+		.layout {
+			background-color: #ffffff61;
+			min-height: calc(100vh - 90px);
+			#top {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				.nav {
+					background-image: url('./../../assets/icones/nav.png');
+					background-size: contain;
+					height: 120px;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					width: 200px;	
+				}
+				.menu {
+					background-image: url('./../../assets/icones/circleProfil.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					height: 247px;
+					.menuNav {
+						position: absolute;
+						left: 15%;
+						display: flex;
+						height: 247px;
+						flex-direction: column;
+						justify-content: space-between;
+						h2:first-child {
+							text-transform: uppercase;
+							color: white;
+							font-size: 1.7rem;
+							margin-top: 0%;
+							position: revert;
+							text-shadow: #d00c0c 1px 0 2px;
+						}
+						h2 {
+							text-transform: uppercase;
+							color: white;
+							font-size: 1.7rem;
+							margin-bottom: 27%;
+							position: relative;
+							right: 4px;
+							text-shadow: #d00c0c 1px 0 2px;
+						}
+					}
+				}
+            }
+            section {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .redBox {
+                    background-color: #a92c4a;
+                    width: 70%;
+                    height: 305px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+					margin: 5% 8%;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+                .greenBox {
+                    background-color: #679089;
+                    width: 70%;
+                    height: 305px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+					margin: 5% 8%;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+            }
+			#form {
+				position: absolute;
+				bottom: -16%;
+				background-color: #4a6e6b;
+				opacity: 90%;
+				//padding: 5%;
+				height: 495px;
+				text-align: center;
+				width: -webkit-fill-available;
+				h3 {
+					color: white;
+					text-transform: uppercase;
+					font-size: 22px;
+					margin: 6% auto;
+					text-align: center;
+				}
+				form {
+					input#nom {
+						width: 60%;
+						margin: auto;
+						p {
+							text-align:center;
+							font-weight: 600;
+						}
+					}
+					.possibilities {
+						display:flex;
+						height:auto;
+						justify-content: center;
+						align-items: center;
+						#imageDl {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#imageIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#lien {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#lienIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#file {
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#fichierIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+					}
+					textarea {
+						text-align: center;
+						text-transform: uppercase;
+						font-weight: 600;
+					}
+					.buttonStyle {
+						border-top: 50px solid white;
+						border-left: 25px solid transparent;
+						border-right: 25px solid transparent;
+						height: 0;
+						width: 50%;
+						margin: 2% auto 5% auto;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						.button {
+							background-color: transparent;
+							border: none;
+							color: teal;
+							text-transform: uppercase;
+							position: relative;
+							bottom: 25px;
+							font-weight: 600;
+						}
+					}
+					img {
+						width: 15%;
+						margin-bottom: 5%;
+						position: relative;
+						bottom: 85px;
+						left: 200px;
+					}
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 399px) {
+	.imgBackground {
+		background-image: url('./../../assets/icones/bndSite.png');
+		min-height: calc(100vh - 90px);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: inherit;
+		.layout {
+			background-color: #ffffff61;
+			min-height: calc(100vh - 90px);
+			#top {
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				.nav {
+					background-image: url('./../../assets/icones/nav.png');
+					background-size: contain;
+					height: 120px;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					width: 200px;	
+				}
+				.menu {
+					background-image: url('./../../assets/icones/circleProfil.png');
+					background-size: contain;
+					background-repeat: no-repeat;
+					opacity: 95%;
+					height: 247px;
+					.menuNav {
+						position: absolute;
+						left: 15%;
+						display: flex;
+						height: 247px;
+						flex-direction: column;
+						justify-content: space-between;
+						h2:first-child {
+							text-transform: uppercase;
+							color: white;
+							font-size: 1.7rem;
+							margin-top: 0%;
+							position: revert;
+							text-shadow: #d00c0c 1px 0 2px;
+						}
+						h2 {
+							text-transform: uppercase;
+							color: white;
+							font-size: 1.7rem;
+							margin-bottom: 27%;
+							position: relative;
+							right: 4px;
+							text-shadow: #d00c0c 1px 0 2px;
+						}
+					}
+				}
+		    }
+            section {
+                display: flex;
+                justify-content: space-around;
+				flex-direction: column;
+                .redBox {
+                    background-color: #a92c4a;
+                    width: 90%;
+                    height: 200px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+					margin: 20% auto;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+                .greenBox {
+                    background-color: #679089;
+                    width: 90%;
+                    height: 200px;
+                    opacity: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 20% auto;
+                    span {
+                        color: white;
+                        font-size: 70px;
+                    }
+                }
+            }
+			#form {
+				position: absolute;
+				bottom: 15px;
+				width: 100%;
+				background-color: #4a6e6b;
+				opacity: 90%;
+				height: 60%;
+				text-align: center;
+				h3 {
+					color: white;
+					text-transform: uppercase;
+					font-size: 22px;
+					margin: 6% auto;
+					text-align: center;
+				}
+				form {
+					input#nom {
+						p {
+							text-align:center;
+							font-weight: 600;
+						}
+					}
+					.possibilities {
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						#imageDl {
+							height: 150px;
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#imageIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#lien {
+							height: 150px;
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#lienIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+						#file {
+							height: 150px;
+							margin-bottom: 0;
+							margin-top: 2%;
+							p {
+								color:white;
+								text-transform:uppercase;
+								font-size:22px;
+								text-align:center;
+								margin:0;
+							}
+							#fichierIcone {
+								content:url('./../../assets/icones/downloadFileIcone.png');
+								background-size: contain;
+								width: 120px;
+								position: relative;
+								bottom: 15%;
+							}
+						}
+					}
+					textarea {
+						text-align: center;
+						text-transform: uppercase;
+						font-weight: 600;
+						width: 95%;
+					}
+					.buttonStyle {
+						border-top: 50px solid white;
+						border-left: 25px solid transparent;
+						border-right: 25px solid transparent;
+						height: 0;
+						width: 50%;
+						margin: 2% auto 5% auto;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						.button {
+							background-color: transparent;
+							border: none;
+							color: teal;
+							text-transform: uppercase;
+							position: relative;
+							bottom: 25px;
+							font-weight: 600;
+						}
+					}
+					img {
+						width: 15%;
+						margin-bottom: 5%;
+						position: relative;
+						bottom: 62px;
+						left: 140px;
+					}
+				}
+			}
+	    }
+    }
+}

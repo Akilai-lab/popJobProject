@@ -1,0 +1,76 @@
+<div class="imgBackground">
+	<div class="layout">
+	    <div id="top">
+            <div class="nav" (click)="viewNav()" *ngIf="isClicked === false"></div>
+            <div class="menu" *ngIf="isClicked === true">
+                <div class="menuNav">
+                    <h2 routerLink="/profil">
+                        accéder au profil
+                    </h2>
+                    <h2>
+                        retour
+                    </h2>
+                </div>
+            </div>
+		</div>
+        <h3>Nos Abonnements</h3>
+        <section>
+            <div class="infoSuscribe">
+                <div class="title">                
+                    <span>?</span>
+                    <span>?</span>
+                    <h4>Pourquoi</h4></div>
+                <ul>
+                    <li class="puceCouleur">Lien direct entre candidats et recruteurs</li>
+                    <li class="puceCouleur">La promotion des offres les plus récentes en évidence</li>
+                    <li class="puceCouleur">Une page dédiée aux projets des candidats pour une clareté dans leur présentation</li>
+                    <li class="puceCouleur"> Un site accessible et simple à utiliser performant dans vos recherches</li>
+                    <li class="puceCouleur">Des filtres de recherche facilitant vos démarches</li>
+                </ul>
+            </div>
+            <div class="subscribe">
+                <h4>Souscrire</h4>
+            </div>
+            <div class="formRecrut">
+                <h5>s'inscrire comme recruteur</h5>
+                <form (ngSubmit)="suscribeRecrut(f)" #f="ngForm">
+                    <div class="form-group">
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="NOM" ngModel pattern="[a-zA-Z ]*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="prenom" name="prenom" class="form-control" placeholder="PRENOM" ngModel pattern="[a-zA-Z ]*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="mail" name="mail" class="form-control" placeholder="MAIL" ngModel pattern="/^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+/" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="nom" class="form-control" placeholder="PASSWORD">
+                    </div>
+                    <div class="buttonStyle">
+                        <button class="button" type="submit" class="submit" [disabled]="f.invalid">s'inscrire</button>
+                    </div>
+                </form>
+            </div>
+            <div class="formCandidat">
+                <h5>s'inscrire comme candidat</h5>
+                <form (ngSubmit)="suscribeCandidat(g)" #g="ngForm">
+                    <div class="form-group">
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="NOM" ngModel pattern="[a-zA-Z ]*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="prenom" name="prenom" class="form-control" placeholder="PRENOM" ngModel pattern="[a-zA-Z ]*" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="mail" name="mail" class="form-control" placeholder="MAIL" ngModel pattern="/^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+/" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="PASSWORD">
+                    </div>
+                    <div class="buttonStyleCand">
+                        <button class="button"  type="submit" class="submit" [disabled]="g.invalid">s'inscrire</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+	</div>
+</div>
