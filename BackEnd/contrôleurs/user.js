@@ -23,10 +23,7 @@ exports.signup = async (req, res, next) => {
      })
 };
 let idUser;
-/**akilaroha@hotmail.fr
- * 
- * mdp : machou1254
- */
+
 exports.login = async (req, res, next) => {
         User.findOne({ where: {mail: req.body.email} })
         .then(User => {
