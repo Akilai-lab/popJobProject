@@ -27,9 +27,7 @@ for(let i of files){
     for(let j = 0; j <= i.length; j++) {
         console.log(typeof i[j])
         if(i[j].fieldname == 'image'){
-            //console.log(j.filename);//affiche le nom
             image = `${req.protocol}://${req.get('host')}/images/${i[j].filename}`;
-            //console.log(image)
             if(userId.status == 'Candidat') {
             Project.create({ 
                 'link': link, 
@@ -52,9 +50,7 @@ for(let i of files){
         }
        
         if(i[j].fieldname == 'fichier'){
-            //console.log(j.filename);//affiche le nom
             folder = `${req.protocol}://${req.get('host')}/images/${i[j].filename}`;
-            //console.log(folder)
             if(userId.status == 'Candidat') {
             Project.create({ 
                 'link': link, 
@@ -78,10 +74,6 @@ for(let i of files){
     }
 }
 };
-/**akilaroha@hotmail.fr
- * 
- * mdp : machou1254
- */
 //router.get('/AllProjects', multer, project.getAllProjects);
 //axios.get("http://localhost:3000/api/project/AllProjects")
 exports.getAllProjects = async (req, res, next) => {
