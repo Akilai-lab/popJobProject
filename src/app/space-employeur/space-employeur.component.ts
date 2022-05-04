@@ -123,7 +123,7 @@ export class SpaceEmployeurComponent implements OnInit {
   .then(response => {
       console.log(response.data);
       let tab = response.data;
-      tab.forEach(element => {
+      tab.forEach((element: { id: any; lastName: any; name: any; }) => {
         console.log(element)
         let id = element.id;
         let lastName = element.lastName;
@@ -143,8 +143,6 @@ export class SpaceEmployeurComponent implements OnInit {
 }
 
   searchDispo() {
-  /** On va faire une recherche dans la bdd où l'id de l'user va être rajouté à une page de profil pour accéder à ses données et disponibilités **/
-  /**Le recruteur rentre une date de début à fin pour afficher les candidats disponibles pour cette période */
   this.dispoSelect = true;
   }
   saveDisponbilities(form:NgForm) {
@@ -168,10 +166,10 @@ export class SpaceEmployeurComponent implements OnInit {
           let endingMonthFilter = end.split('-')[1];
           let endingDayFilter = end.split('-')[1];
           if(
-            (begininMonth <= begininMonthFilter)//si le mois de départ est inférieur ou = à celui du filtre
-            &&(beginindDay <= begininDayFilter)//si le jour de départ est inférieur ou égale à celui du filtre
-            &&(endingMonth >= endingMonthFilter)//si le mois de fin est supérieur ou égale à celui du filtre
-            &&(endingDay >= endingDayFilter)//si le jour de fin est supérieur ou égale à celui du filtre
+            (begininMonth <= begininMonthFilter)
+            &&(beginindDay <= begininDayFilter)
+            &&(endingMonth >= endingMonthFilter)
+            &&(endingDay >= endingDayFilter)
           ){
             console.log(true);
           }

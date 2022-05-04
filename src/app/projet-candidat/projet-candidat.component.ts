@@ -80,20 +80,12 @@ export class ProjetCandidatComponent implements OnInit {
     console.log(this.isClicked)
     this.isClicked = true;
   }
-  /*
-  mail: fdsjifjods@hotmail.fr
-  mdp: machi1987
-  */
   add() {
     let store = localStorage.getItem('id');
-    //récupère l'id du localstorage
-    //et doit le comparer avec l'id de la personne connectée
     if(store){
       this.isActive = true;
       console.log(this.isActive)
     }
-    /*this.isActive = true;
-    console.log(this.isActive)*/
   }
 
   addImage() {
