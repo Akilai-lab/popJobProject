@@ -13,11 +13,6 @@ export class OfferEmployeurComponent implements OnInit {
   isClicked : boolean;
   offersList : any;
   userStatus: any;
-  /**
-   * Recruteur
-   * mail : recruteur@gmail.fr
-   * mdp: Recruteur1987
-   */
   constructor() {
     this.isActive = false;
     this.isClicked = false;

@@ -137,7 +137,7 @@ export class ProfilComponent implements OnInit {
     const mail = form.value['mail'];
     const localisation = form.value['localisation'];
     const parcours = form.value['parcours'];
-    const domaine = form.value['domaine']; // renvoi undefined
+    const domaine = form.value['domaine'];
     const start = form.value['trip-start'];
     const end = form.value['trip-end'];
     const firstLink = form.value['linkOne'];

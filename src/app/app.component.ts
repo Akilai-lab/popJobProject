@@ -30,14 +30,6 @@ export class AppComponent {
   }
   refuse() {
     this.acceptOrNot=false;
-    /**En autorisant les cookies */
-    /**
-     * sauvegarder une page dans le localstorage avant de passer à la suivante et ensuite supprimer celle ci
-     * Enregistrer si un utilisateur a oui ou non accepté le renouvellement de son abonnement 
-        *  S'il n'a pas répondu, afficher la pop up à sa prochane connexion
-     * Si un recruteur a engagé un candidat, créer une fonction pour enregistrer sa prochaine offre et la plaçer en page d'accueil
-     * Envoyer les données au localhost:3030/
-     */
   }
   accept() {
     this.acceptOrNot=false;
