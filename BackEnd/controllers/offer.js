@@ -48,10 +48,6 @@ exports.addOffer = async (req, res, next) => {
         res.status(400).json({ error })
     }); 
 };
-/**akilaroha@hotmail.fr
- * 
- * mdp : machou1254
- */
 exports.getOffers = async (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
