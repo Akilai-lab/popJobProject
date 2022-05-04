@@ -3,11 +3,6 @@ const Profil = require ('./../models/profil');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-/**akilaroha@hotmail.fr
- * 
- * mdp : machou1254
- */
-
 exports.updateProfil = async (req, res, next) => {
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
